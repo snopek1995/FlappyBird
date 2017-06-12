@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Postac = new System.Windows.Forms.PictureBox();
             this.Dolna_rura = new System.Windows.Forms.PictureBox();
             this.Gorna_rura = new System.Windows.Forms.PictureBox();
             this.Wynik_text = new System.Windows.Forms.Label();
             this.Koniec_text1 = new System.Windows.Forms.Label();
             this.Koniec_text2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Postac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dolna_rura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gorna_rura)).BeginInit();
@@ -102,6 +104,12 @@
             this.Koniec_text2.TabIndex = 6;
             this.Koniec_text2.Text = "label3";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +140,7 @@
         private System.Windows.Forms.Label Wynik_text;
         private System.Windows.Forms.Label Koniec_text1;
         private System.Windows.Forms.Label Koniec_text2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
