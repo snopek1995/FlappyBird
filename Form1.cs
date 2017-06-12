@@ -12,7 +12,7 @@ namespace FlappyBird
 {
     public partial class Form1 : Form
     {
-        bool skoki = false;
+       
         int grawitacja = 5;
         int predkosc = 5;
         int wynik = 0;
@@ -34,6 +34,25 @@ namespace FlappyBird
             Gorna_rura.Left -= predkosc;
             Postac.Top += grawitacja;   // ruch postaci
 
+        }
+
+        // Zmiana lotu birdsa [ spacja - zmiana z lotu na dol na lot do gory
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                grawitacja = -3;
+            }
+
+        }
+
+        // Zmiana lotu na lot do dołu 
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Space)
+            {
+                grawitacja = 2;
+            }
         }
     }
 }

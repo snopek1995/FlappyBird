@@ -29,50 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Postac = new System.Windows.Forms.PictureBox();
-            this.Dolna_rura = new System.Windows.Forms.PictureBox();
-            this.Gorna_rura = new System.Windows.Forms.PictureBox();
             this.Wynik_text = new System.Windows.Forms.Label();
             this.Koniec_text1 = new System.Windows.Forms.Label();
             this.Koniec_text2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.Postac)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Dolna_rura)).BeginInit();
+            this.Gorna_rura = new System.Windows.Forms.PictureBox();
+            this.Dolna_rura = new System.Windows.Forms.PictureBox();
+            this.Postac = new System.Windows.Forms.PictureBox();
+            this.Ziemia = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Gorna_rura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dolna_rura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Postac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ziemia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Postac
-            // 
-            this.Postac.BackColor = System.Drawing.Color.Transparent;
-            this.Postac.Image = global::FlappyBird.Properties.Resources.bird_straight;
-            this.Postac.Location = new System.Drawing.Point(12, 80);
-            this.Postac.Name = "Postac";
-            this.Postac.Size = new System.Drawing.Size(58, 44);
-            this.Postac.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Postac.TabIndex = 1;
-            this.Postac.TabStop = false;
-            // 
-            // Dolna_rura
-            // 
-            this.Dolna_rura.BackColor = System.Drawing.Color.Transparent;
-            this.Dolna_rura.Image = global::FlappyBird.Properties.Resources.pipe;
-            this.Dolna_rura.Location = new System.Drawing.Point(114, 285);
-            this.Dolna_rura.Name = "Dolna_rura";
-            this.Dolna_rura.Size = new System.Drawing.Size(100, 126);
-            this.Dolna_rura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Dolna_rura.TabIndex = 2;
-            this.Dolna_rura.TabStop = false;
-            // 
-            // Gorna_rura
-            // 
-            this.Gorna_rura.BackColor = System.Drawing.Color.Transparent;
-            this.Gorna_rura.Image = global::FlappyBird.Properties.Resources.pipedown;
-            this.Gorna_rura.Location = new System.Drawing.Point(187, -4);
-            this.Gorna_rura.Name = "Gorna_rura";
-            this.Gorna_rura.Size = new System.Drawing.Size(100, 171);
-            this.Gorna_rura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Gorna_rura.TabIndex = 3;
-            this.Gorna_rura.TabStop = false;
             // 
             // Wynik_text
             // 
@@ -110,12 +79,56 @@
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Gorna_rura
+            // 
+            this.Gorna_rura.BackColor = System.Drawing.Color.Transparent;
+            this.Gorna_rura.Image = global::FlappyBird.Properties.Resources.pipedown;
+            this.Gorna_rura.Location = new System.Drawing.Point(187, -4);
+            this.Gorna_rura.Name = "Gorna_rura";
+            this.Gorna_rura.Size = new System.Drawing.Size(100, 171);
+            this.Gorna_rura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Gorna_rura.TabIndex = 3;
+            this.Gorna_rura.TabStop = false;
+            // 
+            // Dolna_rura
+            // 
+            this.Dolna_rura.BackColor = System.Drawing.Color.Transparent;
+            this.Dolna_rura.Image = global::FlappyBird.Properties.Resources.pipe;
+            this.Dolna_rura.Location = new System.Drawing.Point(114, 285);
+            this.Dolna_rura.Name = "Dolna_rura";
+            this.Dolna_rura.Size = new System.Drawing.Size(100, 126);
+            this.Dolna_rura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Dolna_rura.TabIndex = 2;
+            this.Dolna_rura.TabStop = false;
+            // 
+            // Postac
+            // 
+            this.Postac.BackColor = System.Drawing.Color.Transparent;
+            this.Postac.Image = global::FlappyBird.Properties.Resources.bird_straight;
+            this.Postac.Location = new System.Drawing.Point(12, 80);
+            this.Postac.Name = "Postac";
+            this.Postac.Size = new System.Drawing.Size(58, 44);
+            this.Postac.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Postac.TabIndex = 1;
+            this.Postac.TabStop = false;
+            // 
+            // Ziemia
+            // 
+            this.Ziemia.Image = global::FlappyBird.Properties.Resources.ground;
+            this.Ziemia.Location = new System.Drawing.Point(-7, 371);
+            this.Ziemia.Name = "Ziemia";
+            this.Ziemia.Size = new System.Drawing.Size(317, 40);
+            this.Ziemia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ziemia.TabIndex = 7;
+            this.Ziemia.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FlappyBird.Properties.Resources.back;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(299, 401);
+            this.Controls.Add(this.Ziemia);
             this.Controls.Add(this.Koniec_text2);
             this.Controls.Add(this.Koniec_text1);
             this.Controls.Add(this.Wynik_text);
@@ -124,9 +137,12 @@
             this.Controls.Add(this.Postac);
             this.Name = "Form1";
             this.Text = "Wynik";
-            ((System.ComponentModel.ISupportInitialize)(this.Postac)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Dolna_rura)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Gorna_rura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dolna_rura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Postac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ziemia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +157,7 @@
         private System.Windows.Forms.Label Koniec_text1;
         private System.Windows.Forms.Label Koniec_text2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox Ziemia;
     }
 }
 
