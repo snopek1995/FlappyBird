@@ -13,8 +13,8 @@ namespace FlappyBird
     public partial class Form1 : Form
     {
        
-        int grawitacja = 5;
-        int predkosc = 5;
+        int grawitacja = 3;
+        int predkosc = 3;
         int wynik = 0;
 
 
@@ -33,6 +33,22 @@ namespace FlappyBird
             Dolna_rura.Left -= predkosc; // brak przesuniecia rury w prawo
             Gorna_rura.Left -= predkosc;
             Postac.Top += grawitacja;   // ruch postaci
+
+            // zderzenia 
+            if(Postac.Bounds.IntersectsWith(Ziemia.Bounds))
+            {
+                koniec_gry();
+            }
+
+            else if(Postac.Bounds.IntersectsWith(Gorna_rura.Bounds))
+            {
+                koniec_gry();
+            }
+
+            else if(Postac.Bounds.IntersectsWith(Dolna_rura.Bounds))
+            {
+                koniec_gry();
+            }
 
         }
 
@@ -53,6 +69,12 @@ namespace FlappyBird
             {
                 grawitacja = 2;
             }
+        }
+
+        // koniec gry
+        private void koniec_gry()
+        {
+            timer1.Stop();
         }
     }
 }
